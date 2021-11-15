@@ -3,7 +3,7 @@ use std::env; // for argc,argv
 // Compile: rustc ver_cmp.rs
 // Run: ./ver_cmp 1.1 1.2
 
-// converts list
+// converts string to integer list
 fn ver_str_to_ints(v: &str) -> Vec<i16> {
   let strings: Vec<_> = v.split(".").collect();
   let numbers: Vec<i16> = strings.iter().flat_map(|x| x.parse()).collect();
